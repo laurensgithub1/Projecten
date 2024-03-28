@@ -1,0 +1,38 @@
+﻿/* used in print dialog, not in normal print */
+html
+{
+	overflow: auto;
+	margin:0;
+	padding:0;
+	-ms-zoom: 0.45;
+	/*-moz-transform: scale(0.45);*/
+	-moz-transform-origin: 50% 0;
+	-o-transform: scale(0.45);
+	-o-transform-origin: 50% 0;
+	/*-webkit-transform: scale(0.45);*/
+	-webkit-transform-origin: 50% 0; 
+}
+body
+{
+    margin:0px;
+    padding:0px;
+}
+
+#printcontent 
+{
+}
+.printPage
+{
+	background-color:White;
+	-moz-box-shadow: 0 0 6px #696969;
+	-webkit-box-shadow: 0 0 6px #696969;
+	box-shadow: 0 0 6px #696969;
+	width:18.6cm;
+	padding:1.2cm;
+	margin:10px;
+	min-height:27.3cm
+}
+.printPage:firstChild
+{
+    margin-top:0px;
+}

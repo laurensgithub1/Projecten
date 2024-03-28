@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undersea Turtle</title>
+<style>
+  body {
+    background-color: #73C6B6; /* Oceaanblauw */
+    margin: 0;
+    padding: 0;
+  }
+
+  canvas {
+    border: 20px solid #000;
+    display: block;
+    margin: 200px auto;
+    background-image: url('Achtergrond_spel.jfif'); /* Voeg hier de URL van je onderzeefoto toe */
+    background-size: cover;
+  }
+
+  .pipe {
+    background-image: url('Koraal.jpg'); /* Voeg hier de URL van je koraalafbeelding toe */
+    background-size: cover;
+    border-radius: 10px; /* Afgeronde hoeken voor koraalvorm */
+  }
+
+  /* Overlay stijl */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Volledige breedte van het scherm */
+    height: 100%; /* Volledige hoogte van het scherm */
+    background-image: url('Achtergrond.png'); /* Voeg hier de URL van je startschermafbeelding toe */
+    background-size: cover;
+    z-index: 9999; /* Zorg ervoor dat de overlay bovenop het canvas staat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Stijl voor de startknop */
+  .start-button {
+    background-color: #FF5733;
+    color: white;
+    padding: 60px 120px;
+    font-size: 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Stijl voor de knop voor het kiezen van de schildpad */
+  .bird-choice-button {
+    background-color: #FF5733;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<!-- Overlay voor startscherm -->
+<div class="overlay" id="startOverlay">
+  <button class="start-button" onclick="startGame()">Start Game</button>
+  <button class="bird-choice-button" onclick="changeTurtle()">Change Turtle</button>
+</div>
+<canvas id="gameCanvas" width="960" height="640"></canvas>
+<script>
+  var canvas = document.getElementById("gameCanvas");
+  var ctx = canvas.getContext("2d");
+
+  var turtle = {
+    x: 50,
+    y: canvas.height / 2 - 10,
+    radius: 10,
+    color: "#FF5733",
+    velocity: 0,
+    gravity: 0.5,
+    jumpStrength: 8
+  };
+
+  var pipes = [];
+  var pipeWidth = 50;
+  var pipeGap = 120;
+  var pipeVelocity = 3;
+  var pipeFrequency = 100;
+  var score = 0;
+  var gameInterval;
+  var frames = 0;
+
+  window.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+      turtle.velocity = -turtle.jumpStrength;
+    }
+  });
+
+  function startGame() {
+    document.getElementById("startOverlay").style.display = "none"; // Verberg het startscherm
+    pipes = [];
+    score = 0;
+    turtle.velocity = 0;
+    frames = 0;
+    if (gameInterval) clearInterval(gameInterval);
+    gameInterval = setInterval(updateGame, 20);
+  }
+
+  function updateGame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    turtle.velocity += turtle.gravity;
+    turtle.y += turtle.velocity;
+
+    drawTurtle();
+    drawPipes();
+
+    if (frames % pipeFrequency === 0) {
+      createPipe();
+    }
+
+    movePipes();
+
+    checkCollision();
+
+    frames++;
+
+    // Elke 3 seconden 1 punt toevoegen
+    if (frames % 150 === 0) {
+      score++;
+    }
+  }
+
+  function drawTurtle() {
+    ctx.beginPath();
+    ctx.arc(turtle.x, turtle.y, turtle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = turtle.color;
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  function createPipe() {
+    var pipeY = Math.floor(Math.random() * (canvas.height - pipeGap));
+    pipes.push({ x: canvas.width, y: 0, height: pipeY, gapY: pipeY + pipeGap, color: "#FFA07A" });
+  }
+
+  function drawPipes() {
+    for (var i = 0; i < pipes.length; i++) {
+      ctx.fillStyle = pipes[i].color;
+      ctx.fillRect(pipes[i].x, pipes[i].y, pipeWidth, pipes[i].height);
+      ctx.fillRect(pipes[i].x, pipes[i].gapY, pipeWidth, canvas.height - pipes[i].gapY);
+    }
+  }
+
+  function movePipes() {
+    for (var i = 0; i < pipes.length; i++) {
+      pipes[i].x -= pipeVelocity;
+
+      if (pipes[i].x + pipeWidth < 0) {
+        pipes.splice(i, 1);
+        i--;
+      }
+    }
+  }
+
+  function checkCollision() {
+    if (turtle.y - turtle.radius < 0 || turtle.y + turtle.radius > canvas.height) {
+      clearInterval(gameInterval);
+      alert("Game Over! Score: " + score);
+      setTimeout(function() {
+        var restart = confirm("Do you want to play again?");
+        if (restart) {
+          startGame();
+        }
+      }, 3000); // Wacht 3 seconden voordat de herstartmelding verschijnt
+    }
+
+    for (var i = 0; i < pipes.length; i++) {
+      if (
+        turtle.x + turtle.radius > pipes[i].x &&
+        turtle.x - turtle.radius < pipes[i].x + pipeWidth &&
+        (turtle.y - turtle.radius < pipes[i].height || turtle.y + turtle.radius > pipes[i].gapY)
+      ) {
+        // Game over als de speler de pijp raakt
+        clearInterval(gameInterval);
+        alert("Game Over! Score: " + score);
+        setTimeout(function() {
+          var restart = confirm("Do you want to play again?");
+          if (restart) {
+            startGame();
+          }
+        }, 4000);
+      }
+    }
+  }
+ 
+  // Functie om de schildpad te veranderen
+  function changeTurtle() {
+    // Hier kun je de code toevoegen om de schildpad te veranderen
+    // Bijvoorbeeld: turtle.color = "blue"; // Verander de schildpadkleur naar blauw
+  }
+</script>

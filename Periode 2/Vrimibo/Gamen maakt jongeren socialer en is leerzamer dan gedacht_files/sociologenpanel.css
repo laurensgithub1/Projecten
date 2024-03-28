@@ -1,0 +1,789 @@
+/**
+ * Sociologenpanel General
+ */
+
+body.single-sociologenpanel .container,
+body.single-sociologenpanel_form .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px;
+}
+
+body.single-sociologenpanel .page-header,
+body.single-sociologenpanel_form .page-header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+body.single-sociologenpanel .page-header .site-title,
+body.single-sociologenpanel_form .page-header .site-title {
+  display: none;
+}
+
+body.single-sociologenpanel .page-header .sociologenpanel-logo,
+body.single-sociologenpanel_form .page-header .sociologenpanel-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel .page-header .sociologenpanel-logo,
+  body.single-sociologenpanel_form .page-header .sociologenpanel-logo {
+    top: 75px;
+  }
+}
+
+body.single-sociologenpanel .page-header .socialevraagstukken-logo,
+body.single-sociologenpanel_form .page-header .socialevraagstukken-logo {
+  position: absolute;
+  top: 15px;
+  right: 75px;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel .page-header .socialevraagstukken-logo,
+  body.single-sociologenpanel_form .page-header .socialevraagstukken-logo {
+    left: 15px;
+    text-align: center;
+  }
+}
+
+body.single-sociologenpanel .page-header .hamburger,
+body.single-sociologenpanel_form .page-header .hamburger {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  z-index: 100;
+}
+
+body.single-sociologenpanel .page-header .hamburger button,
+body.single-sociologenpanel_form .page-header .hamburger button {
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+body.single-sociologenpanel .page-header .hamburger #menu-toggle,
+body.single-sociologenpanel_form .page-header .hamburger #menu-toggle {
+  background: none;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: 100;
+  display: none;
+}
+
+body.single-sociologenpanel #main-menu,
+body.single-sociologenpanel_form #main-menu {
+  font-family: "Work Sans", "Karla", sans-serif;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0,0,0,.9);
+  color: #FFF;
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 80px 20px 0;
+  padding: 12vh 20px 0;
+}
+
+body.single-sociologenpanel #main-menu ul,
+body.single-sociologenpanel_form #main-menu ul {
+  list-style: none;
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  padding: 0;
+}
+
+body.single-sociologenpanel #main-menu li,
+body.single-sociologenpanel_form #main-menu li {
+  border-bottom: #333 1px solid;
+  padding: .5em;
+}
+
+body.single-sociologenpanel #main-menu li.menu-item-29611,
+body.single-sociologenpanel_form #main-menu li.menu-item-29611,
+body.single-sociologenpanel #main-menu li.menu-item-29612,
+body.single-sociologenpanel_form #main-menu li.menu-item-29612,
+body.single-sociologenpanel #main-menu li.menu-item-29626,
+body.single-sociologenpanel_form #main-menu li.menu-item-29626 {
+  display: none;
+}
+
+body.single-sociologenpanel #main-menu a,
+body.single-sociologenpanel_form #main-menu a {
+  color: #FFF;
+  opacity: .8;
+  text-decoration: none;
+}
+
+body.single-sociologenpanel #main-menu a:hover,
+body.single-sociologenpanel_form #main-menu a:hover,
+body.single-sociologenpanel #main-menu a:focus,
+body.single-sociologenpanel_form #main-menu a:focus {
+  opacity: 1;
+}
+
+body.single-sociologenpanel hr,
+body.single-sociologenpanel_form hr {
+  height: 1px;
+  background: #524b4d;
+  margin: 3em auto;
+  opacity: .3;
+}
+
+body.single-sociologenpanel h1,
+body.single-sociologenpanel_form h1,
+body.single-sociologenpanel h2,
+body.single-sociologenpanel_form h2,
+body.single-sociologenpanel h3,
+body.single-sociologenpanel_form h3,
+body.single-sociologenpanel h4,
+body.single-sociologenpanel_form h4 {
+  font-family: "Work Sans", "Karla", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #524b4d;
+  line-height: 1;
+}
+
+body.single-sociologenpanel h1,
+body.single-sociologenpanel_form h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  margin: 1em 0 .15em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel h1,
+  body.single-sociologenpanel_form h1 {
+    font-size: 32px;
+    font-size: 3.2rem;
+    overflow: hidden;
+    margin: 2em 0 .15em;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.single-sociologenpanel h1,
+  body.single-sociologenpanel_form h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    overflow: hidden;
+  }
+}
+
+
+body.single-sociologenpanel .site-partners,
+body.single-sociologenpanel_form .site-partners {
+  background: none !important;
+}
+
+body.single-sociologenpanel .site-footer,
+body.single-sociologenpanel_form .site-footer {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body.single-sociologenpanel .site-info,
+body.single-sociologenpanel_form .site-info {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 2em 0;
+}
+
+body.single-sociologenpanel .footer-logo,
+body.single-sociologenpanel_form .footer-logo {
+  background: none !important;
+}
+
+/**
+ * Sociologenpanel Article
+ */
+body.single-sociologenpanel {
+  background: #ffdee6;
+  color: #524b4d;
+  font-family: "Noto Serif", "Karla", sans-serif;
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+
+body.single-sociologenpanel h1.page-title {
+  font-size: 20px;
+  font-size: 2.0rem;
+  margin: 1em 0 .15em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel h1.page-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+    overflow: hidden;
+    margin: 2em 0 .15em;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.single-sociologenpanel h1.page-title {
+    font-size: 17px;
+    font-size: 1.7rem;
+    overflow: hidden;
+  }
+}
+
+body.single-sociologenpanel h2.article-title {
+  font-size: 48px;
+  font-size: 4.8rem;
+  margin: 1em 0 .15em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel h2.article-title {
+    font-size: 32px;
+    font-size: 3.2rem;
+    overflow: hidden;
+    margin: 2em 0 .15em;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.single-sociologenpanel h2.article-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+    overflow: hidden;
+  }
+}
+
+body.single-sociologenpanel p.intro {
+  font-family: "Work Sans", "Karla", sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1;
+  text-align: center;
+  margin: 0 0 .75em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel p.intro {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.single-sociologenpanel p.intro {
+    font-size: 20px;
+    font-size: 2.0rem;
+  }
+}
+
+body.single-sociologenpanel .article-meta,
+body.single-sociologenpanel .article-meta .entry-date {
+  font-family: "Work Sans", "Karla", sans-serif !important;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #524b4d !important;
+}
+@media screen and (max-width: 880px) {
+  body.single-sociologenpanel .article-meta,
+  body.single-sociologenpanel .article-meta .entry-date {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.single-sociologenpanel .article-meta,
+  body.single-sociologenpanel .article-meta .entry-date {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+}
+
+body.single-sociologenpanel .article-meta {
+  margin-bottom: 2.5em;
+}
+
+body.single-sociologenpanel .article-meta .entry-date {
+  margin-left: 1em;
+}
+
+body.single-sociologenpanel .article-meta br {
+  display: none;
+}
+
+body.single-sociologenpanel .article-meta a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #524b4d;
+}
+
+body.single-sociologenpanel .article-meta a:hover,
+body.single-sociologenpanel .article-meta a:focus {
+  color: #000;
+}
+
+body.single-sociologenpanel .entry-content {
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+body.single-sociologenpanel figure {
+  max-width: 800px;
+  font-family: "Work Sans", "Karla", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin: 2em 0 3em;
+}
+
+body.single-sociologenpanel figcaption {
+  margin-bottom: .5em;
+}
+
+body.single-sociologenpanel .sociologenpanel-description {
+  background: #FFF;
+  font-family: "Work Sans", "Karla", sans-serif;
+  padding: 1em;
+}
+
+body.single-sociologenpanel .sociologenpanel-description h3 {
+  text-align: left;
+  margin: 0 0 1em;
+}
+body.single-sociologenpanel .sociologenpanel-description p {
+  margin: 0;
+}
+
+body.single-sociologenpanel .share-buttons {
+  margin-top: 5em;
+}
+
+body.single-sociologenpanel #respond {
+  background: #ffe5ed !important;
+}
+
+/**
+ * Sociologenpanel Form
+ */
+
+body.single-sociologenpanel_form {
+  font-family: "Work Sans", "Karla", sans-serif;
+  background: #e8e8e8;
+}
+
+body.single-sociologenpanel_form .pre-intro {
+  background: #FFF;
+  padding: 1em 1.25em;
+}
+
+body.single-sociologenpanel_form .intro {
+  font-size: 28px;
+  font-size: 2.8rem;
+  text-align: center;
+  padding: 1em;
+}
+
+body.single-sociologenpanel_form .nf-response-msg {
+  background: #FFF;
+  padding: 1.25em .5em .25em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+body.single-sociologenpanel_form .nf-form-title,
+body.single-sociologenpanel_form .nf-form-fields-required,
+body.single-sociologenpanel_form .ninja-forms-req-symbol {
+  display: none;
+}
+
+body.single-sociologenpanel_form .nf-before-form-content {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+body.single-sociologenpanel_form .nf-field-label {
+  font-weight: 400;
+}
+
+body.single-sociologenpanel_form .nf-field-description {
+  margin-bottom: 1em;
+  font-weight: 700;
+  background: #FFF;
+  padding: .7em 1em;
+}
+
+body.single-sociologenpanel_form .nf-field-element li {
+  background: #aeaeae;
+  padding: .25em .5em !important;
+}
+
+body.single-sociologenpanel_form input[type="text"],
+body.single-sociologenpanel_form input[type="email"],
+body.single-sociologenpanel_form input[type="url"],
+body.single-sociologenpanel_form input[type="password"],
+body.single-sociologenpanel_form input[type="search"],
+body.single-sociologenpanel_form input[type="number"],
+body.single-sociologenpanel_form input[type="tel"],
+body.single-sociologenpanel_form input[type="range"],
+body.single-sociologenpanel_form input[type="date"],
+body.single-sociologenpanel_form input[type="month"],
+body.single-sociologenpanel_form input[type="week"],
+body.single-sociologenpanel_form input[type="time"],
+body.single-sociologenpanel_form input[type="datetime"],
+body.single-sociologenpanel_form input[type="datetime-local"],
+body.single-sociologenpanel_form input[type="color"],
+body.single-sociologenpanel_form textarea
+{
+  border: none;
+  border-radius: 0;
+  font-family: "Work Sans", "Karla", sans-serif;
+}
+
+body.single-sociologenpanel_form textarea {
+  height: 6em;
+}
+
+body.single-sociologenpanel_form input[type="button"],
+body.single-sociologenpanel_form input[type="submit"] {
+  color: #FFF;
+  background: #000;
+  font-family: "Work Sans", "Karla", sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: .75em 1.25em;
+}
+
+/**
+ * Sociologenpanel Page
+ */
+
+body.sociologenpanel_page h1.page-title {
+  font-size: 48px;
+  font-size: 4.8rem;
+  margin: 1em 0 .15em;
+  padding: 0 1em;
+}
+@media screen and (max-width: 880px) {
+  body.sociologenpanel_page h1.page-title {
+    font-size: 32px;
+    font-size: 3.2rem;
+    overflow: hidden;
+    margin: 2em 0 .15em;
+  }
+}
+@media screen and (max-width: 380px) {
+  body.sociologenpanel_page h1.page-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+    overflow: hidden;
+  }
+}
+
+body.sociologenpanel_page .entry-content {
+  max-width: 1240px;
+}
+
+body.sociologenpanel_page .sociologenpanelleden {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+}
+
+body.sociologenpanel_page .sociologenpanellid {
+  flex: 0 0 200px;
+  margin: 1em;
+}
+
+body.sociologenpanel_page .sociologenpanellid .photo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: #FFF;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.sociologenpanel_page .sociologenpanellid .name {
+  margin-bottom: .1em;
+  overflow: hidden;
+}
+
+body.sociologenpanel_page .sociologenpanellid .description {
+  text-align: center;
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-family: "Work Sans", "Karla", sans-serif;
+  line-height: 1.3;
+  background: none;
+}
+
+body.single-sociologenpanel .sociologenpanel-articles-wrap,
+body.sociologenpanel_page .sociologenpanel-articles-wrap {
+  background: #FFF;
+  padding: .5em 1em 1.5em;
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 1em auto;
+}
+
+body.single-sociologenpanel ul.sociologenpanel-articles,
+body.sociologenpanel_page ul.sociologenpanel-articles {
+  list-style: none;
+  text-align: center !important;
+}
+
+body.single-sociologenpanel ul.sociologenpanel-articles li,
+body.sociologenpanel_page ul.sociologenpanel-articles li {
+  text-align: center !important;
+  font-family: "Work Sans", "Karla", sans-serif !important;
+}
+
+body.single-sociologenpanel ul.sociologenpanel-articles a,
+body.sociologenpanel_page ul.sociologenpanel-articles a {
+  text-decoration: none;
+  color: #524b4d;
+  text-align: center;
+  font-family: "Work Sans", "Karla", sans-serif;
+}
+
+body.single-sociologenpanel ul.sociologenpanel-articles a:hover,
+body.single-sociologenpanel ul.sociologenpanel-articles a:focus,
+body.single-sociologenpanel ul.sociologenpanel-articles a:active,
+body.sociologenpanel_page ul.sociologenpanel-articles a:hover,
+body.sociologenpanel_page ul.sociologenpanel-articles a:focus,
+body.sociologenpanel_page ul.sociologenpanel-articles a:active {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/**
+ * Sociologenpanel in header (together with theme sv2016)
+ */
+
+header#masthead div.container aside.sociologenpanel-in-header  {
+	display: none;
+}
+@media screen and (max-width: 880px) {
+  header#masthead div.container aside.sociologenpanel-in-header  {
+  	display: none !important;
+  }
+}
+
+@media screen and (min-width: 881px) {
+	body.sociologenpanel-in-header header#masthead div.site-branding {
+		left: 15px;
+		margin-left: 0;
+	}
+	header#masthead div.container aside.sociologenpanel-in-header {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		right: 15px;
+		background: #feebef;
+    background: #ffdee6;
+		padding: 10px;
+		font-family: 'Work Sans', sans-serif;
+		top: 25px;
+		width: 318px;
+		height: 150px;
+		overflow: hidden;
+		text-align: center;
+	}
+	header#masthead div.container aside.sociologenpanel-in-header div.sociologenpanel-logo {
+		background: url(../images/sociologenpanel_logo.svg) no-repeat;
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	header#masthead div.container aside.sociologenpanel-in-header h3.entry-title {
+		font-family: 'Work Sans', sans-serif;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 185px;
+		line-height: 1.1;
+		font-size: 17px;
+		font-size: 1.7rem;
+	}
+	header#masthead div.container aside.sociologenpanel-in-header a.btn {
+		padding: 8px 15px;
+		background: #FFF;
+		color: #696969;
+		text-decoration: none;
+		font-size: 14px;
+		font-size: 1.4rem;
+		font-weight: 700;
+		position: relative;
+		top: 90px;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	header#masthead div.container aside.sociologenpanel-in-header a.btn:hover {
+		background: #696969;
+		color: #FFF;
+	}
+  header#masthead.sticky div.container aside.sociologenpanel-in-header {
+  	display: none;
+  }
+}
+
+@media screen and (min-width: 881px) and (max-width: 1016px) {
+	body.sociologenpanel-in-header header#masthead div.site-branding,
+	body.sociologenpanel-in-header header#masthead div.site-branding img.site-logo,
+	body.sociologenpanel-in-header header#masthead div.site-branding .site-title,
+	body.sociologenpanel-in-header header#masthead div.site-branding .site-description {
+		width: 530px !important;
+	}
+	body.sociologenpanel-in-header header#masthead div.site-branding img.site-logo {
+		right: inherit !important;
+	}
+}
+
+/**
+ * Sociologenpanel Widget (together with theme sv2016)
+ */
+
+aside.sociologenpanel-widget {
+  display: block;
+  position: relative;
+  background: #ffdee6;
+  padding: 10px;
+  font-family: 'Work Sans', sans-serif;
+  /* top: 25px;
+  width: 318px;*/
+  margin: 21px 27px;
+  min-height: 150px;
+  overflow: hidden;
+  text-align: center;
+}
+
+aside.sociologenpanel-widget div.sociologenpanel-logo {
+  background: url(../images/sociologenpanel_logo.svg) no-repeat;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+aside.sociologenpanel-widget h3.entry-title {
+  font-family: 'Work Sans', sans-serif !important;
+  text-transform: initial !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 185px;
+  line-height: 1.1;
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+aside.sociologenpanel-widget a.btn {
+  padding: 8px 15px;
+  background: #FFF;
+  color: #696969;
+  text-decoration: none;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+  top: 90px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+aside.sociologenpanel-widget a.btn:hover {
+  background: #696969;
+  color: #FFF !important;
+}
+
+
+/**
+ * Sociologenpanel in article stream (together with theme sv2016)
+ */
+
+@media screen and (min-width: 881px) {
+  body.search .sociologenpanel.sociologenpanel-in-header,
+  body.archive .sociologenpanel.sociologenpanel-in-header,
+  body.home .sociologenpanel.sociologenpanel-in-header {
+    display: none;
+  }
+}
+
+body.search .sociologenpanel .entry-header,
+body.archive .sociologenpanel .entry-header,
+body.home .sociologenpanel .entry-header,
+body.search .sociologenpanel .entry-content,
+body.archive .sociologenpanel .entry-content,
+body.home .sociologenpanel .entry-content {
+  background: #ffdee6;
+  color: #524b4d;
+  font-family: 'Work Sans', sans-serif;
+  margin-right: 20px;
+}
+
+body.search .sociologenpanel h2.entry-title a,
+body.archive .sociologenpanel h2.entry-title a,
+body.home .sociologenpanel h2.entry-title a {
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+body.search .most-recent.sociologenpanel h2.entry-title,
+body.archive .most-recent.sociologenpanel h2.entry-title,
+body.home .most-recent.sociologenpanel h2.entry-title {
+  text-shadow: 3.5px 3.5px 10.5px rgba(46, 47, 51, .2);
+}
+
+body.search .sociologenpanel .entry-header,
+body.archive .sociologenpanel .entry-header,
+body.home .sociologenpanel .entry-header {
+  padding: 15px 15px 0;
+}
+
+body.search .sociologenpanel .entry-content,
+body.archive .sociologenpanel .entry-content,
+body.home .sociologenpanel .entry-content {
+  padding: 15px 15px 25px;
+  min-height: 240px;
+}
+
+body.search .sociologenpanel .entry-footer,
+body.archive .sociologenpanel .entry-footer,
+body.home .sociologenpanel .entry-footer {
+  background: none;
+}
+
+div.post-thumbnail.sociologenpanel-thumbnail {
+  background: url(../images/sociologenpanel_logo.svg);
+  background-size: 65% !important;
+  background-position: 50% 40% !important;
+  border: #FFF 1px solid !important;
+  margin: 1em 20px 10px 20px !important;
+}
+
+.most-recent div.post-thumbnail.sociologenpanel-thumbnail {
+  margin: 0 !important;
+}

@@ -1,0 +1,296 @@
+/**
+ * File sv2016.js.
+ *
+ * JavaScript functions for certain functionalities of the theme.
+ */
+
+
+function mobileButtonInit() {
+	// Show the toggler and adjust the logo in case JavaScript is enabled
+	var windowWidth = $(window).innerWidth();
+	var windowHeight = $(window).innerHeight();
+	if( windowWidth < 880 ) {
+		$('header#masthead div.site-branding').css('right', '64px');
+		if ( windowHeight < 440 ) {
+			$('header#masthead div.site-branding').css('right', '48px');
+		}
+	}
+	if( windowWidth < 480 ) {
+		$('header#masthead div.site-branding').css('right', '48px');
+	}
+
+}
+
+$(document).ready(function() {
+
+/**
+ * Menu toggler for mobile and tablet screensizes
+ *
+ */
+
+	$('#menu-toggler').show();
+	// Activate the toggling function for the toggler
+	$('#menu-toggler').click(function() {
+		$('#main-navigation').fadeToggle(150);
+	});
+
+	mobileButtonInit();
+
+
+/**
+ * Sub menu function
+ *
+ */
+	$("li.menu-item-has-children").hover(function() {
+        $(this).addClass('active').find('.sub-menu-wrap')
+            .stop(true, true).delay(50).animate({ "opacity": "show" }, 100 );
+    }, function(){
+        $(this).removeClass('active').find('.sub-menu-wrap')
+            .stop(true, true).delay(50).animate({ "opacity": "hide" }, 150 );
+    });
+
+
+/**
+ * Category Navigation
+ *
+ */
+	// Reveal the toggle button in case JavaScript is enabled
+	$('#cat-toggler').show();
+	// Applying the toggle function to the element
+	$('#cat-toggler').click(function() {
+		$('#category-navigation').toggleClass('open');
+		$('#cat-close').fadeToggle();
+	});
+	// Mobile version
+	$('li.menu-item-29611').click(function() {
+		$('#main-navigation').hide(100);
+		$('#category-navigation').toggleClass('open');
+		$('#cat-close').fadeToggle();
+	});
+
+	// Activate the close button in the navigation
+	$('#cat-close').click(function() {
+		$('#category-navigation').removeClass('open');
+		$('#cat-close').hide();
+	});
+
+	// Open and close the main categories
+	$('li.parent-category > .category-title').click(function() {
+		if( $(this).parent().hasClass('clickedon') ) {
+			$(this).parent().removeClass('clickedon');
+		} else {
+			$('.parent-category').removeClass('clickedon');
+			$(this).parent().toggleClass('clickedon');
+		};
+	});
+
+
+/**
+ * Search From
+ *
+ */
+ 	$('#main-navigation form.search-form').focusin(function() {
+		$(this).addClass('focused');
+		$('#main-navigation').show();
+	});
+ 	$('#main-navigation form.search-form').focusout(function() {
+		$(this).removeClass('focused');
+		//$('#main-navigation').removeClass('hovered');
+	});
+
+	/* FIXME: Fix for Android so it keeps displaying the menu when focused on the search form */
+	$('#main-navigation form.search-form input[type="search"]').focusin(function() {
+		$('#main-navigation form.search-form').addClass('focused');
+		$('#main-navigation').show();
+	});
+
+/**
+ * Dossiers
+ *
+ */
+ 	// Dossier block on article page
+
+	// Reveal the toggle button in case JavaScript is enabled...
+	$('.dossier .toggler').show();
+	// ... and then add a class to the dossier for better styling...
+	$('.dossier').addClass('toggler-visible');
+	// ... and hide the articles in the dossier (in case JavaScript is enabled)
+	$('.dossier ul').hide();
+	// Enable the toggle function on the toggler
+	$('.dossier .toggler').click(function() {
+		$(this).toggleClass('down');
+		$(this).parent().find('ul').slideToggle(100);
+	});
+
+
+/**
+ * Series
+ *
+ */
+ 	// Series block on article page
+
+	// Reveal the toggle button in case JavaScript is enabled
+	$('.serie .toggler').show();
+	// Hide the articles in the dossier in case JavaScript is enabled
+	$('.serie > .serie-description').hide();
+	// Enable the toggle function on the toggler
+	$('.serie .toggler').click(function() {
+		$(this).toggleClass('down');
+		$(this).parent().parent().find('.serie-description').slideToggle(100);
+	});
+
+
+/**
+ * Article sources
+ *
+ */
+	// Reveal the toggle button in case JavaScript is enabled
+	$('.article-sources .toggler').show();
+	// Hide content
+	$('.article-sources .article-sources-content').hide();
+	// Enable the toggle function on the toggler
+	$('.article-sources .toggler').click(function() {
+		$(this).toggleClass('down');
+		$(this).parent().find('.article-sources-content').slideToggle(150);
+	});
+
+/**
+ * Comments
+ *
+ */
+	// Reveal the toggle button in case JavaScript is enabled
+	$('#comments .toggler').show();
+	// Hide content and form
+	//$('#comments .comment-list').hide();
+	//$('#comments #respond').hide();
+	// Enable the toggle function on the toggler
+	$('#comments .toggler').click(function() {
+		$(this).toggleClass('down');
+		$(this).parent().parent().find('#respond').slideToggle(150);
+		$(this).parent().parent().find('.comment-list').delay(150).slideToggle(150);
+	});
+
+/**
+ * Button back to top
+ *
+ */
+
+	$('.button-back-to-top').click( function() {
+
+		var windowWidth = $(window).width();
+
+		if( windowWidth > 880 ) {
+
+			$("html, body").animate({ scrollTop: "267" });
+
+		} else {
+
+			$("html, body").animate({ scrollTop: "0" });
+
+		}
+
+	});
+
+/**
+ * Duplicate Newsletter Banner for pop-up
+ *
+ */
+
+	$('section.widget_wysija').clone().attr('id', 'newsletter-popup').insertAfter('section.widget_wysija');
+
+/**
+ * Close button for Newsletter Banner
+ *
+ */
+
+	$('#newsletter-popup .close').click( function() {
+		$('body').removeClass("scrolled");
+		$('section#newsletter-popup').css( 'bottom', '-164px' );
+		$('body').addClass("newsletter-closed");
+	});
+
+
+/**
+ * Newsletter Banner
+ *
+ */
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var probability_array = [ "1", "2", "3", "4" ];
+
+var random_prob_array = shuffle( probability_array );
+
+var random_prob = random_prob_array[0];
+
+	$(window).scroll(function() {
+
+		if( random_prob == "1" ) {
+
+			//Newsletter banner
+			if ($(this).scrollTop() > $('#content').height()*0.4 ){
+				$('body').addClass("scrolled");
+			}
+			else{
+				$('body').removeClass("scrolled");
+			}
+
+		}
+
+	});
+
+}); // document.ready
+
+$(window).resize(function() {
+
+	mobileButtonInit();
+
+	var windowWidth = $(window).width();
+
+	if( windowWidth > 880 ) {
+		$('#main-navigation').show();
+	} else {
+		$('#menu-toggler').show();
+		$('#main-navigation').hide();
+	};
+
+}); // window.resize
+
+/**
+ * Sticky Header
+ */
+$(window).scroll(function() {
+
+	if ($(this).scrollTop() > 253){
+		$('header#masthead').addClass("sticky");
+		$('nav#category-navigation').addClass("sticky");
+	}
+	else{
+		$('header#masthead').removeClass("sticky");
+		$('nav#category-navigation').removeClass("sticky");
+	}
+	// Back to top button
+	if ($(this).scrollTop() > $('#content').height()*0.5 ){
+		$('.button-back-to-top').show();
+	}
+	else{
+		$('.button-back-to-top').hide();
+	}
+
+}); // window.scroll

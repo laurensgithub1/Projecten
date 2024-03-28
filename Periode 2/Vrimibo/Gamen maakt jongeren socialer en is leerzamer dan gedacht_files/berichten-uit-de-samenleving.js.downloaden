@@ -1,0 +1,22 @@
+/**
+ * File berichten-uit-de-samenleving.js.
+ *
+ * JavaScript functions for certain functionalities of the plugin.
+ */
+
+jQuery(document).ready(function() {
+ /**
+  * Menu toggler
+  */
+  /*
+ 	$('#menu-toggle').show();
+ 	// Activate the toggling function for the toggler
+ 	$('#menu-toggle').click(function() {
+ 		$('#main-menu').fadeToggle(150);
+ 	});
+  */
+  jQuery('#main-menu').click(function() {
+ 		jQuery('#main-menu').fadeToggle(150);
+ 	});
+
+});

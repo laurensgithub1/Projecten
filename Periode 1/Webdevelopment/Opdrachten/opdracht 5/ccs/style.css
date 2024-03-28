@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(209, 158, 126);
+}
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
+    }
+p {
+    border: 3px dotted brown;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 120px;
+    margin-left: 50px;
+    background-color: rgb(231, 102, 102);
+    text-align: center;
+  }

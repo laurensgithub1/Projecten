@@ -1,0 +1,9 @@
+.start-button {
+    background-color: #FF5733;
+    color: white;
+    padding: 15px 30px; /* Grotere padding voor meer ruimte rond de tekst */
+    font-size: 24px; /* Grotere lettergrootte */
+    border: none;
+    border-radius: 8px; /* Meer afgeronde hoeken */
+    cursor: pointer;
+}

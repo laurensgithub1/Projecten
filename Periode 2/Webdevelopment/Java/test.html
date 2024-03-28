@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kubes inhoud berekenen</title>
+</head>
+<body>
+    <h1>Bereken de inhoud van een kubus.</h1>
+    <p>Dat kan door lengte keer breedte keer hoogte van de kubus.</p>
+
+    <button onclick="toonCode1()">Toon Code 1</button>
+    <button onclick="toonCode2()">Toon Code 2</button>
+    <button onclick="toonCode3()">Toon Code 3</button>
+
+    <script>
+        function toonCode1() {
+            document.getElementById("code1").style.display = "block";
+            document.getElementById("code2").style.display = "none";
+            document.getElementById("code3").style.display = "none";
+        }
+
+        function toonCode2() {
+            document.getElementById("code1").style.display = "none";
+            document.getElementById("code2").style.display = "block";
+            document.getElementById("code3").style.display = "none";
+        }
+
+        function toonCode3() {
+            document.getElementById("code1").style.display = "none";
+            document.getElementById("code2").style.display = "none";
+            document.getElementById("code3").style.display = "block";
+        }
+    </script>
+
+    <div id="code1" style="display: none;">
+        <!-- Codeblok 1 -->
+        <script>
+            let lengte = parseFloat(prompt("Voer de lengte van de kubus in: ")) || 0;
+            let breedte = parseFloat(prompt("Voer de breedte van de kubus in: ")) || 0;
+            let hoogte = parseFloat(prompt("Voer de hoogte van de kubus in: ")) || 0;
+            let inhoud = lengte * breedte * hoogte;
+            alert("De inhoud van de kubus is " + inhoud);
+        </script>
+    </div>
+
+    <div id="code2" style="display: none;">
+        <!-- Codeblok 2 -->
+        <script>
+            // Voeg hier je tweede stukje code toe
+        </script>
+    </div>
+
+    <div id="code3" style="display: none;">
+        <!-- Codeblok 3 -->
+        <script>
+            // Voeg hier je derde stukje code toe
+        </script>
+    </div>
+</body>
+</html>

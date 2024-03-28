@@ -1,0 +1,6 @@
+Ingevulde geslacht: man
+Ingevoerde motivatiezin: kak
+Ingevoerde achternaam: poep
+Ingevoerde geboortejaar: 2006
+Ingevoerde leeftijd: 18
+Ingevulde gegevens: ['man', 'kak', 'poep', '2006', '18']

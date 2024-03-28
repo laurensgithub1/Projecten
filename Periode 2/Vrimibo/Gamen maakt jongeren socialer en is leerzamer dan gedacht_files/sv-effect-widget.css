@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#effect-vd-maand {
+	position: relative;
+	border: #f2edeb 1px solid;
+	padding-bottom: 57px;
+}
+
+#effect-vd-maand .effect-kader {
+	position: relative;
+	top: 5px;
+	left: 5px;
+	display: table-cell;
+	width: 308px;
+	height: 120px;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'GeometricSlabserif703', Arial, sans-serif;
+	background: url(sv-effect-widget-effect-kader.png) center no-repeat;
+	font-size: 1.4em;
+}
+
+#effect-vd-maand .effect-kader p {
+	padding: 0 8px;	
+}
+
+#effect-vd-maand .effect-kader a:link, #effect-vd-maand .effect-kader a:visited {
+	color: #836463;
+}
+
+#effect-vd-maand .effect-kader a:hover {
+	color: #000;	
+}
+
+#effect-vd-maand .effect-logo {
+	position: absolute;
+	width: 117px;
+	height: 45px;
+	background: url(sv-effect-widget-effect-logo.png) no-repeat;
+	left: 7px;
+	bottom: 7px;
+}
+
+#effect-vd-maand .widget-button {
+	position: absolute;
+	right: 7px;
+	bottom: 12px;
+}

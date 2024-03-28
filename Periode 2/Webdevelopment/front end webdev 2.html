@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drie knoppen</title>
+ 
+    <script>
+        var namenLijst = ["John Doe", "Jane Smith", "Bob Johnson", "Alice Brown", "Jannicke Riekes", "Jan Bouwer", "Charlie Wilson"];
+
+        function getRandomNaam() {
+            // Willekeurige index selecteren
+            var randomIndex = Math.floor(Math.random() * namenLijst.length);
+            // De geselecteerde naam retourneren
+            return namenLijst[randomIndex];
+        }
+
+        function naam() {
+        var naam1 = prompt("Wat is uw naam?", "John Doe", "Jane Smith", "Bob Johnson", "Alice Brown", "Jannicke Riekes", "Jan Bouwer", "Charlie Wilson"
+        );
+        alert(naam1)
+        }
+        
+        function RandomNumber1() {
+            var getal = Math.floor((Math.random()*10)+1);
+            alert(getal);
+        }
+
+        function GuessNumber1() {
+            let guess = 1;
+            var getal = Math.floor((Math.random()*10)+1);
+            while(true){
+                var gok = prompt("Raad een getal tussen 1 T/M 10", "1-10");
+                if (gok == getal) {
+                    alert("Gefeliciteerd! Je hebt het goed in "
+                        + guess + " keer raden! ");
+                    break;
+                }
+                else if (gok > getal) {
+                    guess++;
+                    alert("Te hoog! probeer nog eens!");
+                }
+                else {
+                    guess++;
+                    alert("Te laag! probeer nog eens!");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="naam()">Wat is uw naam</button>
+    <button onclick="RandomNumber1()">Maak een random getal</button>
+    <button onclick="GuessNumber1()">Raad het getal</button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/**
+ * File sociologenpanel.js.
+ *
+ * JavaScript functions for certain functionalities of the plugin.
+ */
+
+//$(document).ready(function() {
+ /**
+  * Menu toggler
+  */
+ 	$('#menu-toggle').show();
+ 	// Activate the toggling function for the toggler
+ 	$('#menu-toggle').click(function() {
+ 		$('#main-menu').fadeToggle(150);
+ 	});
+
+//}
