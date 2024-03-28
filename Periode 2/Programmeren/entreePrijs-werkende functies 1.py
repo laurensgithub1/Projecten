@@ -8,7 +8,7 @@ def vraagWeekdag():
             print("Voer een getal in van 1 t/m 7! [1-ma, 7-zo]")
     
     return invoer
-
+# hehhehehehehaw
 def vraagLeeftijd():
     #hier wordt de code geschreven om de leeftijd te vragen
     leeftijd=250
